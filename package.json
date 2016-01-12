@@ -1,0 +1,55 @@
+{
+  "name": "brfs-babel",
+  "version": "1.0.0",
+  "description": "like brfs, but built on top of babel for es2015",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "babel-core": "^6.4.0",
+    "babel-plugin-static-fs": "^1.1.0",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "concat-stream": "^1.5.1",
+    "faucet": "0.0.1",
+    "semistandard": "^7.0.4",
+    "tape": "^4.4.0"
+  },
+  "semistandard": {
+    "ignore": [
+      "test/files/*.js",
+      "test/require_resolve/"
+    ]
+  },
+  "scripts": {
+    "test": "semistandard && tape test/*.js | faucet"
+  },
+  "keywords": [
+    "babel",
+    "brfs",
+    "es2015",
+    "commonjs",
+    "es6",
+    "babelify",
+    "browserify",
+    "bundle",
+    "static",
+    "file",
+    "inline",
+    "text"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/brfs-babel.git"
+  },
+  "homepage": "https://github.com/Jam3/brfs-babel",
+  "bugs": {
+    "url": "https://github.com/Jam3/brfs-babel/issues"
+  }
+}
