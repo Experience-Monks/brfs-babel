@@ -28,7 +28,7 @@ import { join } from 'path';
 const src = readFileSync(join(__dirname, 'hello.txt'), 'utf8');
 ```
 
-And `hello.txt` is a text ifle containing the string `"Hello, world!"`.
+And `hello.txt` is a text file containing the string `"Hello, world!"`.
 
 After transformation:
 
