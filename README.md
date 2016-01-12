@@ -4,7 +4,7 @@
 
 This is like [brfs](http://npmjs.com/package/brfs), a browserify transform to inline static files, but built on top of Babel and its AST manipulations. This provides some new features, like ES2015 import support, various additional edge cases, cleaner code output, and source maps.
 
-However, since this is a re-write, this currently has [some limitations](#limitations) and currently only supports `fs.readFileSync` and `fs.readdirSync`.
+However, since this is a re-write and work in progress, this has [some limitations](#limitations) and currently only supports `fs.readFileSync` and `fs.readdirSync`.
 
 ## Install
 
@@ -46,8 +46,21 @@ The following `fs` functions are supported:
 
 The following `path` functions will be evaluated statically when they are found inside the arguments of the above calls:
 
-path.join()
-path.resolve()
+- `path.join()`
+- `path.resolve()`
+
+Some test cases are failing from `brfs`. This includes dynamic variables like this:
+
+```js
+const path = '/foo.txt';
+fs.readFileSync(__dirname + path, 'utf8');
+```
+
+As well as inline CommonJS usage, like this:
+
+```js
+require('fs').readFileSync(__dirname + '/foo.txt', 'utf8');
+```
 
 ## License
 
