@@ -24,6 +24,7 @@ function babelBrfs (filename, opts) {
             onFile: this.emit.bind(this, 'file')
           } ]
         ],
+        babelrc: false,
         filename: filename
       });
       this.push(result.code);
